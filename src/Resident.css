@@ -1,0 +1,23 @@
+.resident {
+  padding: 10px;
+  border: 3px solid #394141;
+  border-radius: 5px;
+  min-width: 200px;
+  margin-bottom: 5px;
+  background-color: rgb(197, 136, 157);
+}
+
+.resident p {
+  margin: 2px 0;
+}
+
+.resident p:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 310px) {
+  .resident {
+    padding: 3px;
+    min-width: 100px;
+  }
+}

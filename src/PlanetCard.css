@@ -1,0 +1,97 @@
+.planet-card {
+  background-color: rgb(197, 136, 157);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 3px solid #394141;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+.planet-card ul {
+  padding: 3px;
+  list-style: none;
+}
+
+.planet-card h2 {
+  text-transform: uppercase;
+  animation: moveinright 1s ease-out 1s;
+  animation-fill-mode: backwards;
+  color: black;
+}
+
+.planet-card p {
+  text-transform: capitalize;
+}
+
+.error {
+  color: red;
+}
+
+.mini-planet-card {
+  margin-top: 10px;
+  border: 3px solid #394141;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(197, 136, 157);
+}
+
+span {
+  margin-bottom: -20px;
+  color: #000000;
+  padding: 3px 0;
+  font-weight: bolder;
+  position: relative;
+}
+
+span.underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #394141;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+span.underline-animation:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@keyframes moveinright {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  75% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .planet-card {
+    width: 90%;
+    max-width: 300px; 
+  }
+
+  .planet-card ul {
+    font-size: 0.8em;
+  }
+
+  .planet-card h2 {
+    font-size: 1.2em;
+  }
+}

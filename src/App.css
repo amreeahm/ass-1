@@ -1,0 +1,43 @@
+.app {
+  text-align: center;
+  background-color: rgb(133, 123, 123);
+}
+
+h1 {
+  padding: 0 0 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #413f3f;
+  color: black;
+  display: inline-block;
+  position: relative;
+}
+
+h1.underline-animation-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: black;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+h1.underline-animation-2:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+h1:hover {
+  border-bottom: 3px solid transparent;
+}
+
+.planets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.error {
+  color: red;
+}
